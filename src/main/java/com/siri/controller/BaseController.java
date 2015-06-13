@@ -13,7 +13,7 @@ public class BaseController {
 	private static final String VIEW_INDEX = "index.jsp";
 	private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
  
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
  
 		model.addAttribute("message", "Welcome");
@@ -24,7 +24,7 @@ public class BaseController {
 		return VIEW_INDEX;
  
 	}
- 
+
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String name, ModelMap model) {
  
@@ -33,5 +33,15 @@ public class BaseController {
 		logger.debug("[welcomeName] counter : {}", counter);
 		return VIEW_INDEX;
  
+	}
+	
+	@RequestMapping(value = "view/{page}", method = RequestMethod.GET)
+	public String renderStaticPage(@PathVariable String page, ModelMap model) {
+ 		return "static/" + page + ".html";
+	}
+	
+	@RequestMapping(value = "visited", method = RequestMethod.GET)
+	public String showVisitedMap(ModelMap model) {
+		return "visited.jsp";
 	}
 }

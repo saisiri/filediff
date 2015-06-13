@@ -1,0 +1,44 @@
+body {
+	background-color: aliceblue;
+}
+#filedrag
+{
+	display: none;
+	font-weight: bold;
+	text-align: center;
+	padding: 1em 0;
+	margin: 1em 0;
+	color: #555;
+	border: 2px dashed #555;
+	border-radius: 7px;
+	cursor: default;
+}
+
+#formDiv {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 500px;
+    height: 150px;
+}
+
+#formFieldSet {
+	width: 460px;
+    height: 120px;
+}
+
+#submitUpload {
+	margin-top: 10px;
+	padding: 8px;
+	background-color: #C5D0B2;
+   -webkit-border-radius: 7px;
+}
+
+#fileselect {
+	padding-left: 10px;
+}
+.button {
+	cursor: pointer;
+}

@@ -1,0 +1,10 @@
+#map_container {
+	width : 800px;
+	heiht: 800px;
+}
+
+svg {
+	overflow: visible;
+	margin-top: 350px;
+	margin-left: 180px;
+}
